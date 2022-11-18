@@ -102,12 +102,28 @@
         <div class="backdrop is-hidden" data-modal>
           
           <div class="modal"><button class="button-modal" data-modal-close >
-          <form name="modal-form">
-          <button type="submit" class="button-send">Вiдправити</button>
-
-          </form> 
+          
            
-      </button></div>
+      </button>
+      <form name="modal-form">
+        <h2 class="modal-title">Залиште свої дані, ми вам передзвонимо</h2>
+        <label for="user-name" class="label-data">Ім'я</label>
+        <input name="user-name" id="user-name" type="text" class="modal-form-input">
+
+        <label for="user-phone" class="label-data">Телефон</label>
+        <input name="user-phone" id="user-phone" type="tel" class="modal-form-input">
+
+        <label for="user-email" class="label-data">Пошта</label>
+        <input name="user-email" id="user-email" type="email" class="modal-form-input">
+
+        <label for="user-comments" class="label-data">Коментар</label>
+       <textarea name="user-comments" id="user-comments"  rows="10" class="modal-textarea" placeholder="Введiть текст"></textarea>
+
+
+      <button type="submit" class="button-send">Вiдправити</button>
+
+      </form> 
+    </div>
       </div>
           <!-- <img class="button-modal"
         src="./img/close.png"
