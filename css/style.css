@@ -613,15 +613,15 @@ margin-right: 10px;
 
     .backdrop.is-hidden{opacity: 0; pointer-events: none;} 
 
- .modal{position: absolute;
+ .modal{position: relative;
     top: 50%; left: 50%; transform: translate(-50%,-50%);
      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 4px; min-width: 528px; min-height: 581px; 
+    border-radius: 4px; width: 528px; height: 581px; 
     background-color: var(--second-text-colour); 
  }
 
 
-    .button-modal{top: 8px; right: 8px; position: fixed;}
+    /* .button-modal{top: 8px; right: 8px; position: fixed;} */
 
      
   /* Задаем transition  250ms на все hover */
@@ -635,7 +635,10 @@ margin-right: 10px;
     /* {transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);}  аналогично сокращенно*/
 
 
-     .button-modal{border: none; background-color: var(--second-text-colour); height: 30px; width: 30px; background-image:url(../img/close.png); cursor: pointer;}
+     .button-modal{border: none; background-color: var(--second-text-colour); 
+        /* height: 30px; width: 30px;  */
+        /* background-image:url(../img/close.png); */
+        cursor: pointer;}
 
 
 
@@ -748,17 +751,22 @@ margin-right: 10px;
         }
 
         .modal-form-input:focus {
-            border-color: 1px solid #2196F3;
+            border: 1px solid #2196F3;
         }
 
 
 
 
-        .modal-title{color: var(--main-text-colour); 
+        .modal-title{
+            color: var(--main-text-colour); 
             font-size: 20px;
             line-height: 23px;
             line-height: 0.05;
             text-align: center;
+            margin: 0;
+            margin-bottom: 12px;
+            
+            /* display: block; */
             /* margin-bottom: 28.6px; */
 
            
@@ -831,9 +839,8 @@ margin-right: 10px;
             content: " ";
             width: 16px;
             height: 15px;
-            /* outline: 1px solid orange; */
-            border: 2px solid var(--main-text-colour);
-            box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+             border: 2px solid var(--main-text-colour);
+            /* box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2); */
             border-radius: 4px;
             display: flex;
             margin-right: 8px;
@@ -848,7 +855,8 @@ margin-right: 10px;
                 background-repeat: no-repeat;
                 background-position: center ;
             }
-
+             
+            /* Невидимость элемента */
 
             .visually-hidden {
                 position: absolute;
@@ -862,3 +870,13 @@ margin-right: 10px;
                 clip: rect(0 0 0 0);
                 overflow: hidden;
               }
+
+
+              .close-icon{
+                position: absolute; 
+                top: 8px;
+                right: 8px; 
+            
+            }
+
+                .close-icon:hover{fill: #2196F3;}
