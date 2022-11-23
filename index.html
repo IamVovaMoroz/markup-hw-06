@@ -109,8 +109,8 @@
           
           <div class="modal">
             <button class="button-modal" data-modal-close >
-              <div>
-            <svg class="close-icon" height="30" width="30">
+              <div class="close-icon-div">
+            <svg class="close-icon" height="30" width="30" ;>
               <use href="./img/close-form.svg#icon-close"></use></svg>
             </div>
       </button>
@@ -149,11 +149,30 @@
       </div>
 
         <label for="user-comments" class="label-data">Коментар</label>
-       <textarea name="user-comments" id="user-comments"  rows="10" class="modal-textarea" placeholder="Введiть текст"></textarea>
+       <textarea name="user-comments" id="user-comments"  rows="10" class="modal-textarea"  placeholder="Введiть текст"></textarea>
       
        <!-- Чекбокс подтверждение -->
 
-       <div class="input-line-agree">
+       <div class="checkbox check-field"> 
+        <input 
+          class="visually-hidden" 
+          type="checkbox" 
+          name="privacy policy" 
+          id="privacy policy" 
+          required 
+        /> 
+        <label for="privacy policy" class="form-checkbox" 
+          ><span class="checkbox-agree" 
+            ><svg class="checkbox-svg" width="16px" height="15px"> 
+              <use href="./img/galka.svg#icon-Vector"></use></svg></span 
+          ><span>Погоджуюся з розсилкою та приймаю</span> 
+          <a href="" class="agree-link"><span>Умови договору</span></a></label 
+        > 
+      </div>
+
+ <!-- Чекбокс подтверждение через before -->
+
+       <!-- <div class="input-line-agree">
         <input
           id="checkbox-agree"
           value="agree"
@@ -162,15 +181,14 @@
           class="visually-hidden"
         />
         <label for="checkbox-agree" class="checkbox-agree">
-          <!-- <span class="icon-wrapper">
-            <svg class="agree-icon" width="13" height="9">
+          < <span class="icon-wrapper"> -->
+            <!-- <svg class="agree-icon" width="13" height="9">
               <use href="./"></use>
             </svg>
           </span> -->
-          <span>Погоджуюся з розсилкою та приймаю </span> <a href="" class="agree-link">Умови договору</a></label
+          <!-- <span>Погоджуюся з розсилкою та приймаю </span> <a href="" class="agree-link">Умови договору</a></label
         >
-      </div>
-
+      </div> --> 
       
 
       <button type="submit" class="button-send">Вiдправити</button>
