@@ -636,6 +636,7 @@ margin-right: 10px;
 
 
      .button-modal{border: none;
+      /* top: 8px; */
          /* background-color: var(--second-text-colour);  */
         /* height: 30px; width: 30px;  */
         /* background-image:url(../img/close.png); */
